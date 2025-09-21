@@ -5,10 +5,14 @@ import { stripHeadings, stripHeadingsCode } from './../src/index.js'
 
 describe('🧪 strip-html-headings tests 🧪', () => {
   it('#1 should return true', () => {
+    // @ts-expect-error
+    assert.isEmpty(stripHeadings())
     assert.isEmpty(stripHeadings(''))
   })
 
   it('#2 should return true', () => {
+    // @ts-expect-error
+    assert.isEmpty(stripHeadingsCode())
     assert.isEmpty(stripHeadingsCode(''))
   })
 
