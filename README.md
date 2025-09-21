@@ -4,7 +4,7 @@
 </div>
 
 <blockquote align="center">
-strip HTML headings • keep heading text clean • safe input handling • perfect for text extraction
+Strip HTML Headings • Keep Heading Text Clean • Safe Input Handling • Perfect For Text Extraction
 </blockquote>
 
 <h4 align="center">
