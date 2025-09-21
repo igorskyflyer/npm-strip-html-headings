@@ -2,8 +2,8 @@
 
 import { stripHtmlCode } from '@igorskyflyer/strip-html'
 
-const rxHeadingsCode: RegExp = /<h[1-6][^>]*>(.*?)<\/h[1-6]>/gm
-const rxHeadings: RegExp = /<h[1-6][^>]*>.*?<\/h[1-6]>/gm
+const rxHeadingsCode: RegExp = /<h[1-6][^>]*>(.*?)<\/h[1-6]>/gms
+const rxHeadings: RegExp = /<h[1-6][^>]*>.*?<\/h[1-6]>/gms
 
 /**
  * Strips HTML headings completely.
@@ -11,7 +11,11 @@ const rxHeadings: RegExp = /<h[1-6][^>]*>.*?<\/h[1-6]>/gm
  * @returns {string} The processed string.
  */
 export function stripHeadings(value: string): string {
-  return value.length === 0 ? '' : value.replace(rxHeadings, '').trim()
+  if (typeof value !== 'string' || value.length === 0) {
+    return ''
+  }
+
+  return value.replace(rxHeadings, '').trim()
 }
 
 /**
@@ -20,7 +24,7 @@ export function stripHeadings(value: string): string {
  * @returns {string} The processed string.
  */
 export function stripHeadingsCode(value: string): string {
-  if (value.length === 0) {
+  if (typeof value !== 'string' || value.length === 0) {
     return ''
   }
 
