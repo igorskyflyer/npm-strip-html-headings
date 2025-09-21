@@ -65,13 +65,29 @@ describe('🧪 strip-html-headings tests 🧪', () => {
     assert.equal(stripHeadingsCode('   <h2> Trimmed </h2>   '), 'Trimmed')
   })
 
-  it('#13 should ignore non‑heading tags', () => {
+  it('#13 should ignore non-heading tags', () => {
     assert.equal(
       stripHeadingsCode('<div>Not a heading</div>'),
       '<div>Not a heading</div>'
     )
   })
-  it('#14 should leave angle‑brackets that aren’t tags', () => {
+
+  it('#14 should leave angle-brackets that are not tags', () => {
     assert.equal(stripHeadingsCode('<<notatag>>'), '<<notatag>>')
+  })
+
+  it('#15 should leave angle-brackets that are not tags', () => {
+    assert.equal(stripHeadings('<h1>\n  Hello\n</h1>'), '')
+  })
+
+  it('#16 should leave angle-brackets that are not tags', () => {
+    assert.equal(
+      stripHeadingsCode('<h2>\n  <em>Bold</em> Title\n</h2>'),
+      'Bold Title'
+    )
+  })
+
+  it('#17 should leave angle-brackets that are not tags', () => {
+    assert.equal(stripHeadingsCode('<h2>🚀 Cosmic</h2>'), '🚀 Cosmic')
   })
 })
