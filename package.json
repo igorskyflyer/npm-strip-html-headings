@@ -1,52 +1,71 @@
 {
-	"name": "@igor.dvlpr/strip-html-headings",
-	"version": "1.0.0",
-	"description": "🍛 Strips HTML headings! 🍤",
-	"sideEffects": false,
-	"engines": {
-		"node": ">=16.0"
-	},
-	"types": "./dist/index.d.ts",
-	"main": "./dist/index.js",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "tsc",
-		"test": "ts-mocha test/*.ts",
-		"pub": "npm test && npm run build && npm publish --access public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-strip-html-headings.git"
-	},
-	"keywords": [
-		"igorskyflyer",
-		"igor.dvlpr",
-		"strip",
-		"heading",
-		"header",
-		"html",
-		"html",
-		"md",
-		"code",
-		"remove",
-		"delete"
-	],
-	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-	"license": "MIT",
-	"funding": "https://ko-fi.com/igorskyflyer",
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/npm-strip-html-headings/issues"
-	},
-	"homepage": "https://github.com/igorskyflyer/npm-strip-html-headings#readme",
-	"devDependencies": {
-		"@types/chai": "^4.3.4",
-		"@types/mocha": "^10.0.1",
-		"@types/node": "^16.0.0",
-		"chai": "^4.3.7",
-		"mocha": "^10.2.0",
-		"ts-mocha": "^10.0.0",
-		"typescript": "^5.0.2"
-	}
+    "name": "@igorskyflyer/strip-html-headings",
+    "version": "1.1.0",
+    "description": "🍛 Lightweight utility to strip HTML heading tags (h1-h6). Remove headings completely or extract their text content while cleaning up markup. Perfect for transforming HTML, parsing content, or preparing plain text output. 🍤",
+    "sideEffects": false,
+    "engines": {
+        "node": ">=22.0"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest --run",
+        "pub": "pnpm test && git push origin main --tags"
+    },
+    "keywords": [
+        "clean",
+        "content",
+        "extract",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "heading",
+        "headings",
+        "html",
+        "igor dimitrijević",
+        "igorskyflyer",
+        "markup",
+        "parser",
+        "plain-text",
+        "remove",
+        "sanitize",
+        "strip",
+        "tags",
+        "text",
+        "utility"
+    ],
+    "license": "MIT",
+    "author": "Igor Dimitrijević <support@igorskyflyer.me> (https://github.com/igorskyflyer)",
+    "funding": "https://ko-fi.com/igorskyflyer",
+    "homepage": "https://github.com/igorskyflyer/npm-strip-html-headings",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/igorskyflyer/npm-strip-html-headings.git"
+    },
+    "bugs": {
+        "url": "https://github.com/igorskyflyer/npm-strip-html-headings/issues"
+    },
+    "dependencies": {
+        "@igorskyflyer/strip-html": "^2.1.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.2.4",
+        "@igorskyflyer/biome-config": "^2.1.0",
+        "@types/node": "^22.18.5",
+        "typescript": "^5.9.2",
+        "vitest": "^3.2.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.17.0"
 }
