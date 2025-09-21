@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@igorskyflyer/strip-html':
+        specifier: ^2.1.0
+        version: 2.1.0
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.4
@@ -240,6 +244,10 @@ packages:
     engines: {node: '>=22.0'}
     peerDependencies:
       '@biomejs/biome': ^2.2.2
+
+  '@igorskyflyer/strip-html@2.1.0':
+    resolution: {integrity: sha512-2ZQT0lC35greERxNC8dj6WhbqgzX6TT/BFnhi/rHBJhaKuqJ9fUKdvmqr9yb/cwBGn2PADGi4VIXAOo7Bq3Q9w==}
+    engines: {node: '>=22.0'}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -725,6 +733,8 @@ snapshots:
   '@igorskyflyer/biome-config@2.1.0(@biomejs/biome@2.2.4)':
     dependencies:
       '@biomejs/biome': 2.2.4
+
+  '@igorskyflyer/strip-html@2.1.0': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
